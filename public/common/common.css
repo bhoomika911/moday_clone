@@ -94,6 +94,7 @@ input:focus{
 .sidbarCustom .itemLeftCard{
   display: inline-flex;
   padding  : 5px 5px;
+  display : flex;
 }
 
 .sidbarCustom .roundCircle{
@@ -107,6 +108,8 @@ input:focus{
 }
 
 .sidbarCustom .center{
+  flex : 1;
+  padding : 0px 5px;
   /*margin : 5px 0px 0px 5px ;*/
 }
 

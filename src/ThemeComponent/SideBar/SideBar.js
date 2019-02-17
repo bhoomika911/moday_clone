@@ -37,11 +37,11 @@ export default class SideBar extends Component {
                       </div>
                       <div className="roundSmall" />
 
-                      <div className="center col-lg-7">
+                      <div className="center">
                         <label className="projNameTxt">Project Name</label><br/>
                         <label className="projNameTxt2">Large platform llc</label>
                       </div>
-                      <div className = "col-lg-2 barChartRight">
+                      <div className = "barChartRight">
                         <div className="sparkbar"></div>
                       </div>
                     </div>
