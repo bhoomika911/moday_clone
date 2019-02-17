@@ -1,0 +1,6 @@
+const ACTION_TYPES = {
+  GET_NEWS : "GET_NEWS",
+  CLEAR_GET_NEWS : "CLEAR_GET_NEWS",
+};
+
+export default ACTION_TYPES;
