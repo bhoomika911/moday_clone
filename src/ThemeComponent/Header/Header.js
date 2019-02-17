@@ -4,47 +4,42 @@ import React, {Component} from 'react';
 export default class Header extends Component {
     render(){
         return (
-            <header className="main-header">
-                <a href="#" className="logo">
-                    <span className="logo-mini"><b>A</b>LT</span>
-                    <span className="logo-lg"><b>Admin</b>LTE</span>
-                </a>
-                <nav className="navbar navbar-static-top">
-{
-                    // <a href="#" className="sidebar-toggle" data-toggle="push-menu" role="button">
-                    //     <span className="sr-only">Toggle navigation</span>
-                    // </a>
-                    }
-                    <div className="navbar-custom-menu">
-                        <ul className="nav navbar-nav">
-                            <li className="dropdown messages-menu">
-                                <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <i className="fa fa-envelope-o"></i>
-                                    <span className="label label-success">4</span>
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li className="header">You have 4 messages</li>
-                                    <li>
-                                        <ul className="menu">
-                                            <li>
-                                                <a href="#">
-                                                    <div className="pull-left">
-                                                        <img src="img/user2-160x160.jpg" className="img-circle" alt="User Image" />
-                                                    </div>
-                                                    <h4>
-                                                        Support Team
-                                                        <small><i className="fa fa-clock-o"></i> 5 mins</small>
-                                                    </h4>
-                                                    <p>Why not buy a new awesome theme?</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+            <header className="main-header-comp">
+              <nav className="navbar navbar-static-top navbar-nav-custom">
+                <div className = "navbar-icon-comp navbar-icon-special">
+                  <i className = "fa fa-envelope-o"></i>
+                </div>
+
+                <div className = "navbar-header">
+                  <div className = "navbar-header-item-text">Projects</div>
+                  <div className = "navbar-header-item-text">People</div>
+                  <div className = "navbar-header-item-text">Timeline</div>
+                  <div className = "navbar-header-item-text">Messages</div>
+                  <div className = "navbar-header-item-text">Meetings</div>
+                  <div className = "navbar-header-item-text">Idea Wall</div>
+                  <div className = "navbar-header-item-text">Document</div>
+                  <div className = "navbar-header-item-text">Support</div>
+                </div>
+                <div className = "navbar-header-search-parent">
+                  <div className="navbar-search">
+                    <input className="navbar-search-text" type="text" placeholder="Search or Update"/>
+                    <i className = "fa fa-search navbar-search-icon"></i>
+                  </div>
+                </div>
+                <div className = "navbar-icon-comp">
+                  <i className = "fa fa-envelope-o"></i>
+                </div>
+                <div className = "navbar-icon-comp">
+                  <i className = "fa fa-envelope-o"></i>
+                </div>
+                <div className = "navbar-icon-comp">
+                  <i className = "fa fa-envelope-o"></i>
+                </div>
+                <div className = "navbar-icon-comp">
+                  <i className = "fa fa-envelope-o"></i>
+                </div>
+
+              </nav>
             </header>
         )
     }
