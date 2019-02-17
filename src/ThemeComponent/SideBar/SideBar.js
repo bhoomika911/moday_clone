@@ -9,7 +9,7 @@ export default class SideBar extends Component {
       super(props);
 
       this.state = {
-        projectList : [1,1,1,1,1,1,1,1,1]
+        projectList : [1,1,1,1,1,1,1,1]
       }
     }
 
@@ -53,16 +53,43 @@ export default class SideBar extends Component {
       )
     }
 
+    renderTop(){
+      return (
+        <div className = "topParent">
+          <div className = "topLeft">
+            <label className="projectText">Projects</label>
+          </div>
+
+          <div className = "topRight">
+            <div className="newText">New</div>
+            <div className = "plusIconParent">
+              <i class="fa fa-plus plusIcon"></i>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    renderSearchBar(){
+      return (
+        <div className = "searchbarParent">
+            <input className = "inputSearch" type="text" placeholder="Search or  Update" />
+            <button type="submit" name="search" id="search-btn" class="searchIconBtn"><i class="fa fa-search searchIcon"></i>
+            </button>
+        </div>
+      )
+    }
+
     render(){
         return (
             <aside className="main-sidebar whitebg sidbarCustom">
                 <section className="sidebar">
-
-                  <div className = "searchbarParent">
-                      <input className = "inputSearch" type="text" placeholder="Search or  Update" />
-                      <button type="submit" name="search" id="search-btn" class="searchIconBtn"><i class="fa fa-search searchIcon"></i>
-                      </button>
-                  </div>
+                    {
+                      this.renderTop()
+                    }
+                    {
+                      this.renderSearchBar()
+                    }
                     {
                       this.renderProjectList()
                     }
