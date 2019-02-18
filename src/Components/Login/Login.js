@@ -38,7 +38,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="login-box">
+      <div className="login-box login-screen-back">
         <div className="login-logo">
           <a><b>Admin</b>LTE</a>
         </div>

@@ -9,7 +9,7 @@ export default class SideBar extends Component {
       super(props);
 
       this.state = {
-        projectList : [1,1,1,1,1,1,1,1]
+        projectList : [1,1,1,1,1,1,1,1,1,1,1,1,1]
       }
     }
 

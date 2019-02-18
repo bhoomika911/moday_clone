@@ -193,7 +193,7 @@ input:focus{
 }
 
 .main-header-comp .navbar-nav-custom{
-  border-bottom: 1px solid #e2e1e1;
+  border-bottom: 1px solid #e2e1e1 !important;
   display : flex;
   align-items: center;
   /* justify-content: center */
@@ -207,8 +207,12 @@ input:focus{
 
 }
 
-.main-header-comp .navbar-header-item-text{
+.navbar-header-item-text{
   padding-right: 10px;
+}
+
+.navbar-header-selected{
+  color : #009aff
 }
 
 .main-header-comp .navbar-icon-parent-comp{
@@ -261,7 +265,7 @@ input:focus{
   font-size: 12px
 }
 
-.main-header-comp .navbar-icon-comp{
+.main-header-comp .navbar-icon-comp, .content-wrapper-border-line .navbar-icon-comp{
   /* align-items: center; */
   justify-content: center;
   display: flex;
@@ -270,4 +274,76 @@ input:focus{
   padding : 8px;
   height : 65%;
   margin-right: 10px
+}
+
+.content-wrapper-border-line .content-header-setting-icon{
+  display: flex;
+  flex-direction: row-reverse;
+  flex :1;
+}
+
+.content-wrapper-border-line .main-content-tab-container{
+  background: #FFFFFF
+}
+
+.main-header-comp .custom-nav{
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.content-wrapper-border-line .content-container-navbar{
+  background : #FFFFFF !important;
+  padding : 0px 2px 0px 2px;
+  border-bottom: 1px solid #e2e1e1;
+}
+
+.content-wrapper-border-line .content-container-header{
+  background-image: linear-gradient(to right, #037bcf , #6dd5ed);
+  padding : 0px 2px 0px 2px;
+  height: 75px;
+  align-items: center;
+  display: flex;
+}
+
+.content-wrapper-border-line .content-header-container{
+  /* border-bottom: 1px solid #e2e1e1; */
+  display : flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.content-header-container .content-header-name{
+
+}
+
+.content-header-container .content-header-data{
+  flex :1;
+  display: flex;
+  flex-direction: row-reverse;
+  padding : 15px 15px 15px 15px;
+}
+
+.content-wrapper-border-line .content-selected-header-border{
+  border-bottom: 2px solid #009aff
+}
+
+.content-wrapper-border-line .content-header-text-container{
+  padding : 15px 10px 15px 10px;
+  margin : 0px 2px 0px 2px
+}
+
+.content-wrapper-border-line{
+  border-left : 1px solid #e2e1e1
+}
+
+.login-screen-back{
+  background : #FFFFFF
+}
+
+.content-header-container .content-header-project-name{
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 100;
+  padding-left: 30px;
 }
