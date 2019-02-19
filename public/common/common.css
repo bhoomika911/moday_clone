@@ -311,17 +311,61 @@ input:focus{
   display : flex;
   align-items: center;
   flex-direction: row;
+  flex: 1;
 }
 
 .content-header-container .content-header-name{
-
 }
 
 .content-header-container .content-header-data{
   flex :1;
   display: flex;
-  flex-direction: row-reverse;
-  padding : 15px 15px 15px 15px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding : 15px 25px 15px 15px;
+}
+
+.content-header-data .content-header-bar-chart{
+  margin-left : 15px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+}
+
+.content-header-data .content-header-help-indication-container{
+  background-image: linear-gradient(to right, #ed6f08 , #fdab3d);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  padding : 3px 20px 3px 20px;
+}
+
+.content-header-help-indication-container .content-header-help-percent{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+}
+
+.content-header-help-indication-container .content-header-help-label{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+
+.content-header-bar-chart .content-header-bar-chart-data{
+  margin-right: 5px;
+}
+
+.content-header-bar-chart-data .content-header-bar-chart-data-text{
+  color: #FFFFFF;
+  font-size: 10px;
+  text-align: center;
 }
 
 .content-wrapper-border-line .content-selected-header-border{
@@ -346,4 +390,33 @@ input:focus{
   font-size: 25px;
   font-weight: 100;
   padding-left: 30px;
+}
+
+.content-header-container .content-header-other-detail{
+  flex-direction: row;
+  display: flex;
+  padding-left: 30px;
+}
+
+.content-header-other-detail .content-header-customer-name{
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 100;
+  margin-right: 8px;
+  /* background: red */
+}
+
+.content-header-other-detail .content-header-date-container{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background : #192d4b;
+  color: #FFFFFF;
+  font-size: 10px;
+  /* padding : 2px 8px 2px 8px; */
+  align-items: center;
+  justify-content : center;
+  display: flex;
+  padding : 0px 10px 0px 10px;
 }
