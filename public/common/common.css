@@ -403,7 +403,6 @@ input:focus{
   font-size: 15px;
   font-weight: 100;
   margin-right: 8px;
-  /* background: red */
 }
 
 .content-header-other-detail .content-header-date-container{
@@ -419,4 +418,77 @@ input:focus{
   justify-content : center;
   display: flex;
   padding : 0px 10px 0px 10px;
+}
+
+.workflow-parent{
+  padding: 10px 20px 20px 10px;
+  background: #FFFFFF;
+}
+
+.workflow-parent .workflow-project-details-container{
+  flex-direction: row;
+  display: flex;
+  flex :1;
+}
+
+.workflow-parent .workflow-project-owner-details{
+  display: flex;
+  flex: 0.4;
+}
+
+.workflow-project-owner-details .workflow-project-owner-profile-pic{
+  border-radius : 50%;
+  background: #642d50;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.workflow-project-owner-profile-pic .workflow-project-owner-name-short{
+  color : #FFFFFF;
+  font-size: 13px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.workflow-parent .workflow-project-other-details{
+  display: flex;
+  flex: 0.6;
+  align-items: center;
+}
+
+.workflow-project-owner-details .workflow-project-owner-role, .work-flow-owner-company-details .workflow-project-owner-role{
+  color: #000000;
+  font-size: 10px;
+  margin-right: 5px
+}
+
+.work-flow-owner-company-details .work-flow-owner-company-detail-text{
+  color: #595959;
+  font-size: 15px;
+}
+
+.workflow-project-owner-details .work-flow-owner-det{
+  height: 40;
+  justify-content: center;
+  display: flex;
+  flex-direction: column
+}
+
+.work-flow-owner-det .workflow-project-owner-roles-cont{
+  flex-direction: row;
+  display: flex;
+}
+
+.workflow-project-owner-details .workflow-project-owner-name{
+  color: #000000;
+  font-size: 15px;
+}
+
+.workflow-project-other-details .work-flow-owner-company-details{
+  flex : auto;
+  display: flex;
+  flex-direction: column;
 }
