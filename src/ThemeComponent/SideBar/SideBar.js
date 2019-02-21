@@ -3,6 +3,8 @@
 import React, {Component} from 'react';
 import styles from "./SideBarStyle";
 
+const $ = window.$;
+
 export default class SideBar extends Component {
 
     constructor(props){

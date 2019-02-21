@@ -1,6 +1,8 @@
 // Header.js
 import React, {Component} from 'react';
 
+const $ = window.$;
+
 export default class ContentHeader extends Component {
 
   constructor(props){

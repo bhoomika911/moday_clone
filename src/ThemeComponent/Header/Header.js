@@ -10,7 +10,7 @@ export default class Header extends Component {
       tabList : [
         {
           name : "Projects",
-          onPress : ()=>{this.onPressTab(index)}
+          onPress : ()=>{this.onPressTab()}
         },
         {
           name : "People",
@@ -45,10 +45,10 @@ export default class Header extends Component {
     }
   }
 
-  onPressTab(index){
-    this.setState({
-      selectedTabIndex : index
-    })
+  onPressTab(){
+    // this.setState({
+    //   selectedTabIndex : index
+    // })
   }
 
   render(){
