@@ -1,6 +1,7 @@
 // Header.js
 import React, {Component} from 'react';
 import WorkFlow from "./../WorkFlowComponent/WorkFlow"
+import OverViewTable from "./../OverViewTableComponent/OverViewTable"
 export default class OverView extends Component {
 
   constructor(props){
@@ -14,6 +15,7 @@ export default class OverView extends Component {
     return (
       <div>
         <WorkFlow/>
+        <OverViewTable />
       </div>
     )
   }

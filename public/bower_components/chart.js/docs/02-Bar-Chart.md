@@ -21,7 +21,7 @@ var myBarChart = new Chart(ctx).Bar(data, options);
 
 ```javascript
 var data = {
-	labels: ["January", "February", "March", "April", "May", "June", "July"],
+	labels: ["January"],
 	datasets: [
 		{
 			label: "My First dataset",
