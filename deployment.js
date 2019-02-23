@@ -1,29 +1,26 @@
-amazon s3 credentials
+//*********************  amazon credentials ******************//
   dev@codematrix.org / CodeMatrix@431
+//*********************  amazon credentials ******************//
 
+
+//*********************  amazon  s3 detail ******************//
 Bucket Name:- poc-test.com
 URL: d1klenma7r1x8r.cloudfront.net
 
+
 Users with AWS Management Console access can sign-in at:
 https://282031287020.signin.aws.amazon.com/console
+//*********************  amazon  s3 detail******************//
+
+//*********************  amazon ec2 detail******************//
+
+Public dns : ec2-3-90-113-132.compute-1.amazonaws.com
 
 
+chmod 400 new_monday_clone.pem
 
+Command to connect via ssh :
 
+ssh -i "new_monday_clone.pem" ubuntu@ec2-3-90-113-132.compute-1.amazonaws.com
 
-
-
-
-1.run aws CLI
-2.run below command to configure :
-
-aws configure
-
--It will ask for below things
-
-AWS Access Key ID [None]: AKIAI44QH8DHBEXAMPLE
-AWS Secret Access Key [None]: je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
-Default region name [None]: us-east-1
-Default output format [None]: text
-
-3.
+//*********************  amazon ec2 detail******************//
