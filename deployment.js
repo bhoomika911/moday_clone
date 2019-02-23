@@ -23,4 +23,9 @@ Command to connect via ssh :
 
 ssh -i "new_monday_clone.pem" ubuntu@ec2-3-90-113-132.compute-1.amazonaws.com
 
+
+
+To get running process list
+
+ ps -ef
 //*********************  amazon ec2 detail******************//
