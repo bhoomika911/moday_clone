@@ -82,17 +82,18 @@ export default class Header extends Component {
                 <i className = "fa fa-search navbar-search-icon"></i>
               </div>
             </div>
-            <div className = "navbar-icon-comp">
-              <i className = "fa fa-envelope-o"></i>
+            <div className = "action-item-icon-parent">
+              <i className = "fa ion-android-notifications-none action-item-icon"></i>
             </div>
-            <div className = "navbar-icon-comp">
-              <i className = "fa fa-envelope-o"></i>
+            <div className = "action-item-icon-parent">
+            <div className = "action-item-icon plus-icon">+</div>
+
             </div>
-            <div className = "navbar-icon-comp">
-              <i className = "fa fa-envelope-o"></i>
+            <div className = "action-item-icon-parent">
+              <div className = "action-item-icon userImgNameTxt">KB</div>
             </div>
-            <div className = "navbar-icon-comp">
-              <i className = "fa fa-envelope-o"></i>
+            <div className = "action-item-icon-parent no-border">
+              <i className = "fa ion-grid action-item-icon grid-icon"></i>
             </div>
 
           </nav>

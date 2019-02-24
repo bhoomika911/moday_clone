@@ -18,26 +18,26 @@ class Timeline extends React.Component {
         title : "Phase 1",
         count : "Pulse 5",
       },
-      // {
-      //   title : "Phase 2",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 3",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 4",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 5",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 6",
-      //   count : "Pulse 5"
-      // },
+      {
+        title : "Phase 2",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 3",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 4",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 5",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 6",
+        count : "Pulse 5"
+      },
     ];
 
     let headerList = [
@@ -467,6 +467,7 @@ class Timeline extends React.Component {
     if(isPulseSelected){
       return (
         <div className="selected-pulse-div">
+        <div className="selected-pulse-rel-child-div">
           <div className="selected-pulse-div-lft">
             <div className="selected-pulse-count">
               2
@@ -500,6 +501,7 @@ class Timeline extends React.Component {
                 )
               })
             }
+          </div>
           </div>
         </div>
       )
