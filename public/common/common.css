@@ -575,6 +575,30 @@ input:focus{
   align-items: center;
 }
 
+.workflow-parent  .team-img{
+  height : 22px;
+  width : 22px;
+  border-radius: 11px;
+}
+
+.workflow-parent .team-div{
+  flex-direction: row;
+  display: flex;
+}
+
+.workflow-parent .person-div-single{
+  height : 26px;
+  width :26px;
+  border-radius : 13px;
+  align-items:  center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+  background: white;
+}
+
+
 .workflow-project-owner-details .workflow-project-owner-role, .work-flow-owner-company-details .workflow-project-owner-role{
   color: #000000;
   font-size: 10px;
@@ -932,4 +956,85 @@ input:focus{
   border-radius-left: 5px !important;
   justify-content: center;,
   z-index : 50;
+}
+
+
+.timeline-page .selected-pulse-div{
+  display: flex;
+  flex-direction: row;
+   width  : 600px;
+   height : 50px;
+   border : 1px solid rgba(0,0,0,0.1);
+   border-radius : 5px;
+   /*padding : 5px;*/
+}
+
+.timeline-page .selected-pulse-div-lft{
+  display: flex;
+  flex-direction: row;
+  flex : 1
+}
+
+.timeline-page .selected-pulse-div-rgt {
+  display: flex;
+  flex-direction: row-reverse;
+  flex : 1
+}
+
+.timeline-page .selected-pulse-count {
+  display: flex;
+  height : 50px;
+  width  : 50px;
+  background-color: rgb(28,156,245);
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius : 5px;
+  border-top-left-radius : 5px;
+  color : white;
+  font-size: 20px;
+}
+
+.timeline-page .selected-pulse-text-div{
+  padding : 5px;
+}
+
+.timeline-page .selected-pulse-text{
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.timeline-page .selected-pulse-dot-parent{
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline-page .selected-pulse-dot{
+  height : 6px;
+  width : 6px;
+  border-radius: 3px;
+  margin-right: 3px;
+  background-color: rgb(158,99,216)
+}
+
+.timeline-page .selected-pulse-div-close{
+  display: flex;
+  height : 50px;
+  width  : 50px;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius : 5px;
+  border-top-right-radius : 5px;
+  color : rgba(0,0,0,0.6);
+  font-size: 20px;
+  border-left: 1px solid rgba(0,0,0,0.1)
+}
+
+.timeline-page .selected-pulse-div-action-item{
+  display: flex;
+  height : 50px;
+  width  : 50px;
+  align-items: center;
+  justify-content: center;
+  color : rgba(0,0,0,0.6);
+  font-size: 10px;
 }
