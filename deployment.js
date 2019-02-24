@@ -28,4 +28,29 @@ ssh -i "new_monday_clone.pem" ubuntu@ec2-3-90-113-132.compute-1.amazonaws.com
 To get running process list
 
  ps -ef
+
+
+to killl process
+
+sudo kill -9 12195(this is pid)
 //*********************  amazon ec2 detail******************//
+
+
+
+
+
+
+
+
+
+
+
+
+server {
+   listen 80 default_server;
+   root /var/www/moday_clone/build;
+   server_name http://ec2-3-90-113-132.compute-1.amazonaws.com/;
+   index index.html index.htm;
+   location / {
+   }
+}
