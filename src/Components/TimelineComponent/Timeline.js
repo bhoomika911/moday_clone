@@ -18,26 +18,26 @@ class Timeline extends React.Component {
         title : "Phase 1",
         count : "Pulse 5",
       },
-      {
-        title : "Phase 2",
-        count : "Pulse 5"
-      },
-      {
-        title : "Phase 3",
-        count : "Pulse 5"
-      },
-      {
-        title : "Phase 4",
-        count : "Pulse 5"
-      },
-      {
-        title : "Phase 5",
-        count : "Pulse 5"
-      },
-      {
-        title : "Phase 6",
-        count : "Pulse 5"
-      },
+      // {
+      //   title : "Phase 2",
+      //   count : "Pulse 5"
+      // },
+      // {
+      //   title : "Phase 3",
+      //   count : "Pulse 5"
+      // },
+      // {
+      //   title : "Phase 4",
+      //   count : "Pulse 5"
+      // },
+      // {
+      //   title : "Phase 5",
+      //   count : "Pulse 5"
+      // },
+      // {
+      //   title : "Phase 6",
+      //   count : "Pulse 5"
+      // },
     ];
 
     let headerList = [
@@ -479,12 +479,13 @@ class Timeline extends React.Component {
 
               <div className="selected-pulse-dot-parent">
                 <div className="selected-pulse-dot" />
+                <div className="selected-pulse-dot" />
               </div>
             </div>
           </div>
           <div className="selected-pulse-div-rgt">
             <div className="selected-pulse-div-close">
-              <i className="icon ion-ios-checkmark-empty"></i>
+              <i className="icon ion-android-close"></i>
             </div>
 
             {
