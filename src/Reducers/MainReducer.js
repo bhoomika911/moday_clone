@@ -9,7 +9,10 @@
 
 import { combineReducers } from "redux";
 import HomeReducer from "./../Components/Home/HomeReducer";
+import SideBarReducer from "./../ThemeComponent/SideBar/SideBarReducer";
 
 export default combineReducers({
   homeReducer: HomeReducer,
+
+  sideBarReducer : SideBarReducer
 });

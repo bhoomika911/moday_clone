@@ -59,14 +59,46 @@ function* fetchNews() {
   }
 }
 
+function* getProjectName(action) {
+  let serviceURL = action.serviceURL;
+  let method = action.method;
 
-function* actionWatcher() {
-  yield takeLatest(API_CONST.N_GET_NEWS, fetchNews)
+  try {
+    let response = yield call(_apiCall, serviceURL, {
+      method: method,
+    });
+
+    var responseJSON = yield call(_extJSON, response.res_json);
+    var responseData = {
+      data: responseJSON,
+      headerResponse: response.res
+    };
+
+    yield put({
+      type: ACTION_TYPES.GET_PROJECT_NAME_RES,
+      payload: responseData
+    });
+  } catch (e) {
+    console.log("Error: " + e);
+    var responseData = {
+      isError: true,
+      data: "" + e
+    };
+    yield put({
+      type: ACTION_TYPES.GET_PROJECT_NAME_RES,
+      payload: responseData
+    });
+  }
 }
 
 
+// function* actionWatcher() {
+//   yield takeLatest(API_CONST.N_GET_NEWS, fetchNews)
+// }
+
+
 export default function* rootSaga() {
-  yield all([
-    actionWatcher(),
-  ]);
+  // yield all([actionWatcher(),]);
+  yield takeLatest(API_CONST.N_GET_PROJECT_NAME, getProjectName);
+
 }

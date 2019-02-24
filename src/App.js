@@ -38,7 +38,7 @@ class App extends React.Component {
             <Router history={history}>
               <Switch>
               {
-                <Route path="/" exact component={Timeline} />
+                <Route path="/" exact component={OverView} />
                 // <Route path="/" exact component={OverView} />
                 // <Route path="/Page2" component={Page2} />
                 }

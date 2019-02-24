@@ -9,5 +9,6 @@
 
 const API_CONST = {
   N_GET_NEWS: "N_GET_NEWS",
+  N_GET_PROJECT_NAME : "N_GET_PROJECT_NAME"
 };
 export default API_CONST;
