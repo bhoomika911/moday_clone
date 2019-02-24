@@ -30,7 +30,7 @@
 
 }
 
-.add-circle{
+.overview-table-main .add-circle{
   height : 16px;
   width : 16px;
   border-radius:  8px;
@@ -41,40 +41,40 @@
   margin : 0 10px;
 }
 
-.add-text{
+.overview-table-main .add-text{
   color : rgb(21,125,204);
 }
 
-.orange{
+.overview-table-main .orange{
   background: linear-gradient(rgb(230,112,36),rgb(246,169,74))
 }
 
-.parrot{
+.overview-table-main .parrot{
   background: linear-gradient(rgb(77,165,31),rgb(110,232,46 ))
 }
 
-.grey{
+.overview-table-main .grey{
   background: linear-gradient(rgb(90,90,90),rgb(140,140,140 ))
 }
 
-.white-row{
+.overview-table-main .white-row{
   background: white;
 }
 
-.table-row-div{
+.overview-table-main .table-row-div{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.phase-det-div{
+.overview-table-main .phase-det-div{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.phase-lft {
+.overview-table-main .phase-lft {
   height : 36px;
   width : 36px;
   border-radius: 18px;
@@ -85,21 +85,21 @@
   margin-right:  8px;
 }
 
-.phase-pic-txt{
+.overview-table-main .phase-pic-txt{
   font-weight: bold;
 }
 
-.phase-top{
+.overview-table-main .phase-top{
   font-size: 20px;
   font-weight: 100;
 }
 
-.phase-bottom{
+.overview-table-main .phase-bottom{
   color: rgba(0,0,0,0.5);
   font-size: 10px;
 }
 
-.status-div{
+.overview-table-main .status-div{
   width : 60px;
   height : 50px;
   border-radius:  5px;
@@ -109,24 +109,24 @@
   flex-direction: column;
 }
 
-.status-top-text{
+.overview-table-main .status-top-text{
   font-size: 22px;
   color: white;
 }
 
-.status-bottom-text{
+.overview-table-main .status-bottom-text{
   font-size: 8px;
   color: white;
 }
 
-.progress-row-main{
+.overview-table-main .progress-row-main{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.progress-main{
+.overview-table-main .progress-main{
   width : 100%;
   background: rgba(0,0,0,0.1);
   border-radius: 5px !important;
@@ -134,29 +134,29 @@
   margin-bottom: 3px !important;
 }
 
-.progress-sub{
+.overview-table-main .progress-sub{
   width : 50%;
   background: linear-gradient(to right, #037bcf , #6dd5ed);
   border-radius: 5px !important;
 }
 
-.progress-top-text{
+.overview-table-main .progress-top-text{
   font-size: 10px;
   margin-bottom: 3px;
   color: rgba(0,0,0,0.5);
 }
 
-.progress-bottom-text{
+.overview-table-main .progress-bottom-text{
   font-size: 12px;
   color: rgba(0,0,0,0.7);
 }
 
-.team-div{
+.overview-table-main .team-div{
   flex-direction: row;
   display: flex;
 }
 
-.person-div-single{
+.overview-table-main .person-div-single{
   height : 26px;
   width :26px;
   border-radius : 13px;
@@ -168,13 +168,13 @@
   background: white;
 }
 
-.team-img{
+.overview-table-main .team-img{
   height : 22px;
   width : 22px;
   border-radius: 11px;
 }
 
-.more-person-txt{
+.overview-table-main .more-person-txt{
   color : white;
   font-size: 12px;
   background :rgb(23,26,50);
@@ -186,7 +186,7 @@
   display: flex;
 }
 
-.chart-actual{
+.overview-table-main .chart-actual{
   height: 100px;
   width : 150px;
 }
