@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getNews } from '../../Actions/ActionCreators'
 import API from "../../Constants/APIUrls";
 import styles from "./TimelineStyle";
+import TimelineCalender from "./../TimelineCalenderComponent/TimelineCalender"
 
 const $ = window.$;
 let self;
@@ -514,6 +515,7 @@ class Timeline extends React.Component {
   render(){
     return (
         <div className="timeline-page">
+          <TimelineCalender />
           {
             this.renderPhaseAccordians()
           }

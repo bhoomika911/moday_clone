@@ -1103,3 +1103,12 @@ input:focus{
 .timeline-page .selected-pulse-div-action-item-icon{
   font-size: 20px;
 }
+
+
+/* Timelien calender */
+
+.timeline-calender {
+  background-color: red;
+  width  :100px;
+  height:  100px;
+}

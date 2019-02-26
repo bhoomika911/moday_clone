@@ -17,7 +17,7 @@ let App = () => (
     <ContentHeader history={history}>
       <Router history={history}>
         <Switch>
-          <Route path="/" exact component={OverView} />
+          <Route path="/" exact component={Timeline} />
           <Route path="/timeline" exact component={Timeline} />
         </Switch>
       </Router>
