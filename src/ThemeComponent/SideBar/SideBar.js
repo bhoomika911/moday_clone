@@ -3,55 +3,65 @@
 import React, {Component} from 'react';
 import styles from "./SideBarStyle";
 
+import {
+  clearProjectNameRes
+} from "./SideBarAction";
+import API from "../../Constants/APIUrls";
+import {
+  getProjectName
+} from "../../Actions/ActionCreators";
+
+import { connect } from 'react-redux';
+
 const $ = window.$;
 
-export default class SideBar extends Component {
+class SideBar extends Component {
 
     constructor(props){
       super(props);
 
       this.state = {
         projectList : [
-          {
-            projName : "AI project",
-            sparliLinData : [60,50,20,30,60,50,40]
-          },
-          {
-            projName : "DAB project",
-            sparliLinData : [40,60,20,30,60,50,50]
-          },
-          {
-            projName : "ZMA mobile",
-            sparliLinData : [90,30,60,50,40,60,50]
-          },
-          {
-            projName : "Flexiform Table",
-            sparliLinData : [10,30,60,100,40,60,50]
-          },
-          {
-            projName : "Tms server",
-            sparliLinData : [100,30,60,50,40,60,10]
-          },
-          {
-            projName : "Xyz Project",
-            sparliLinData : [20,20,60,50,40,20,50]
-          },
-          {
-            projName : "D3 charts",
-            sparliLinData : [50,30,60,50,50,60,50]
-          },
-          {
-            projName : "BA project",
-            sparliLinData : [40,60,20,30,60,50,50]
-          },
-          {
-            projName : "ZX mobile",
-            sparliLinData : [90,30,60,50,40,60,50]
-          },
-          {
-            projName : "DLX Project",
-            sparliLinData : [20,20,60,50,40,20,50]
-          },
+          // {
+          //   projName : "AI project",
+          //   sparliLinData : [60,50,20,30,60,50,40]
+          // },
+          // {
+          //   projName : "DAB project",
+          //   sparliLinData : [40,60,20,30,60,50,50]
+          // },
+          // {
+          //   projName : "ZMA mobile",
+          //   sparliLinData : [90,30,60,50,40,60,50]
+          // },
+          // {
+          //   projName : "Flexiform Table",
+          //   sparliLinData : [10,30,60,100,40,60,50]
+          // },
+          // {
+          //   projName : "Tms server",
+          //   sparliLinData : [100,30,60,50,40,60,10]
+          // },
+          // {
+          //   projName : "Xyz Project",
+          //   sparliLinData : [20,20,60,50,40,20,50]
+          // },
+          // {
+          //   projName : "D3 charts",
+          //   sparliLinData : [50,30,60,50,50,60,50]
+          // },
+          // {
+          //   projName : "BA project",
+          //   sparliLinData : [40,60,20,30,60,50,50]
+          // },
+          // {
+          //   projName : "ZX mobile",
+          //   sparliLinData : [90,30,60,50,40,60,50]
+          // },
+          // {
+          //   projName : "DLX Project",
+          //   sparliLinData : [20,20,60,50,40,20,50]
+          // },
         ]
       }
     }
@@ -68,6 +78,59 @@ export default class SideBar extends Component {
        },100)
 
        $( 'li[cardIndex=0]' ).addClass("cardMainSelected");
+
+    }
+
+    componentWillMount(){
+      this.callGetProjectNameWebService()
+
+    }
+
+
+    callGetProjectNameWebService(){
+      let serviceURL = API.GET_PROJECT_NAME;
+      let method = "get";
+      let headers = {
+        "Access-Control-Allow-Origin" : "no-cors"
+      }
+      let payload = {
+        serviceURL : serviceURL,
+        // headers : headers,
+        method : method
+      };
+      this.props.getProjectName(payload);
+    }
+
+    componentWillReceiveProps(nextProps) {
+      if (nextProps.projectNameRes != undefined && nextProps.projectNameRes != '') {
+        if (nextProps.projectNameRes.isError) {
+          this.setState({
+            isScreenLoading : false
+          });
+          alert("Sorry, something went wrong.");
+          return false;
+        } else if(nextProps.projectNameRes.headerResponse.status == 200){
+          let data = nextProps.projectNameRes.data;
+          let projectList = [];
+          data.map(function(item,index){
+            let projItem = {};
+            projItem.projName = item.projectName;
+            projItem.sparliLinData = [20,20,60,50,40,20,50];
+            projectList.push(projItem);
+          });
+
+          this.setState({
+            projectList : projectList,
+            // isScreenLoading : false
+          },()=>this.props.clearProjectNameRes());
+        }else{
+          this.setState({
+            isScreenLoading : false
+          });
+          let errorMsg = nextProps.projectNameRes.data.message;
+          alert(errorMsg);
+        }
+      }
     }
 
     renderProjectList(){
@@ -78,7 +141,8 @@ export default class SideBar extends Component {
               projectList.map(function(objProject ,index){
                 let classnameNew = "cardMainSelected";
                 let temp = objProject.projName.split(" ");
-                let projNameImg = temp[0].substring(0,1) + temp[1].substring(0,1);
+                let projNameImg = temp[0].substring(0,1);
+                projNameImg =  ( temp.length > 1) ?  (projNameImg + temp[1].substring(0,1)) : projNameImg;
 
                 return (
                   <li className="cardMain" cardIndex = {index}>
@@ -149,3 +213,18 @@ export default class SideBar extends Component {
         )
     }
 }
+
+const mapStateToProps = ({ sideBarReducer }) => {
+  const {
+  	projectNameRes
+  } = sideBarReducer;
+
+  return {
+  	projectNameRes: projectNameRes,
+  }
+}
+
+export default connect(mapStateToProps,{
+	getProjectName,
+  clearProjectNameRes
+})(SideBar);

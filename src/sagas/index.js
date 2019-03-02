@@ -4,11 +4,14 @@ import ACTION_TYPES from "../Actions/ActionsType";
 
 //Call for fetching data from api
 const _apiCall = (url, data) => {
+
   return fetch(url, data)
     .then(res => {
       return { res: res, res_json: res.json() };
     })
     .catch(e => {
+
+
       throw e;
     });
 };
@@ -60,19 +63,25 @@ function* fetchNews() {
 }
 
 function* getProjectName(action) {
-  let serviceURL = action.serviceURL;
-  let method = action.method;
-
+  let serviceURL = action.data.serviceURL;
+  let method = action.data.method;
+  // let headers = action.data.headers;
+  
   try {
     let response = yield call(_apiCall, serviceURL, {
       method: method,
+      // headers: headers,
     });
 
+
     var responseJSON = yield call(_extJSON, response.res_json);
+
+
     var responseData = {
       data: responseJSON,
       headerResponse: response.res
     };
+
 
     yield put({
       type: ACTION_TYPES.GET_PROJECT_NAME_RES,
@@ -80,6 +89,8 @@ function* getProjectName(action) {
     });
   } catch (e) {
     console.log("Error: " + e);
+
+
     var responseData = {
       isError: true,
       data: "" + e
