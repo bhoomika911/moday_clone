@@ -199,6 +199,50 @@ input:focus{
   /* justify-content: center */
 }
 
+
+.main-header-comp .action-item-icon-parent{
+  height : 30px;
+  width : 30px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border : 1px solid #e2e1e1;
+  margin-left : 5px;
+}
+
+.main-header-comp .action-item-icon{
+  font-size: 18px;
+  color: rgba(0,0,0,0.7)
+}
+
+.main-header-comp .plus-icon{
+  font-size: 18px;
+  color: rgb(21,125,204)
+}
+
+.main-header-comp .userImgNameTxt{
+  font-size: 14px;
+  color: white;
+  background : black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  border-radius: 13px;
+  height : 26px;
+  width : 26px;
+}
+
+.main-header-comp .no-border{
+  border : 0px;
+
+}
+.main-header-comp .grid-icon{
+  font-size: 24px;
+
+}
+
 .main-header-comp .navbar-header{
   /* background-image: linear-gradient(to right,#037bcf, #6dd5ed); */
   display : flex;
@@ -961,11 +1005,27 @@ input:focus{
 
 .timeline-page .selected-pulse-div{
   display: flex;
+   width  : 600px;
+   height : 50px;
+   border-radius : 5px;
+   position: fixed;
+   bottom : 10px;
+   left: 50%;
+   /*padding : 5px;*/
+}
+
+.timeline-page .selected-pulse-rel-child-div{
+  display: flex;
   flex-direction: row;
    width  : 600px;
    height : 50px;
    border : 1px solid rgba(0,0,0,0.1);
    border-radius : 5px;
+   position: relative;
+   bottom : 50px;
+   left: -50%;
+   background-color: white;
+   z-index: 1000;
    /*padding : 5px;*/
 }
 
@@ -1031,10 +1091,24 @@ input:focus{
 
 .timeline-page .selected-pulse-div-action-item{
   display: flex;
+  flex-direction: column;
   height : 50px;
   width  : 50px;
   align-items: center;
   justify-content: center;
   color : rgba(0,0,0,0.6);
   font-size: 10px;
+}
+
+.timeline-page .selected-pulse-div-action-item-icon{
+  font-size: 20px;
+}
+
+
+/* Timelien calender */
+
+.timeline-calender {
+  background-color: red;
+  width  :100px;
+  height:  100px;
 }

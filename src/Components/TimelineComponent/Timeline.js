@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getNews } from '../../Actions/ActionCreators'
 import API from "../../Constants/APIUrls";
 import styles from "./TimelineStyle";
+import TimelineCalender from "./../TimelineCalenderComponent/TimelineCalender"
 
 const $ = window.$;
 let self;
@@ -18,26 +19,26 @@ class Timeline extends React.Component {
         title : "Phase 1",
         count : "Pulse 5",
       },
-      // {
-      //   title : "Phase 2",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 3",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 4",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 5",
-      //   count : "Pulse 5"
-      // },
-      // {
-      //   title : "Phase 6",
-      //   count : "Pulse 5"
-      // },
+      {
+        title : "Phase 2",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 3",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 4",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 5",
+        count : "Pulse 5"
+      },
+      {
+        title : "Phase 6",
+        count : "Pulse 5"
+      },
     ];
 
     let headerList = [
@@ -467,6 +468,7 @@ class Timeline extends React.Component {
     if(isPulseSelected){
       return (
         <div className="selected-pulse-div">
+        <div className="selected-pulse-rel-child-div">
           <div className="selected-pulse-div-lft">
             <div className="selected-pulse-count">
               2
@@ -501,6 +503,7 @@ class Timeline extends React.Component {
               })
             }
           </div>
+          </div>
         </div>
       )
     }else{
@@ -512,6 +515,7 @@ class Timeline extends React.Component {
   render(){
     return (
         <div className="timeline-page">
+          <TimelineCalender />
           {
             this.renderPhaseAccordians()
           }

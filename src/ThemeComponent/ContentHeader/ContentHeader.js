@@ -2,12 +2,14 @@
 import React, {Component} from 'react';
 
 const $ = window.$;
+let self;
 
 export default class ContentHeader extends Component {
 
   constructor(props){
     super(props);
 
+    self = this;
     this.state = {
       tabList : [
         {
@@ -78,6 +80,30 @@ export default class ContentHeader extends Component {
        barColor: '#FFFFFF',
      } );
 
+     $(".content-header-text-container").click(function(event){
+       event.preventDefault();
+       
+       let selectedTabIndex = parseInt($(event.target).attr("class").split(" ")[0]);
+
+       if(selectedTabIndex !== self.state.selectedTabIndex){
+         self.setState({
+           selectedTabIndex : selectedTabIndex
+         });
+
+         if(selectedTabIndex == 0){
+           self.props.history.push("/")
+
+         }else if(selectedTabIndex == 6){
+           self.props.history.push("/timeline")
+
+         }
+
+       }
+
+     });
+
+
+
      // $( 'li[cardIndex=0]' ).addClass("cardMainSelected");
   }
 
@@ -88,15 +114,11 @@ export default class ContentHeader extends Component {
         <div className = "content-header-container">
           {
             tabList.map(function(item,index){
-              if(selectedTabIndex == index){
-                return(
-                  <div className = "content-header-text-container navbar-header-item-text navbar-header-selected content-selected-header-border">{item.name}</div>
-                )
-              }else{
-                return(
-                  <div className = "content-header-text-container navbar-header-item-text">{item.name}</div>
-                )
-              }
+              let selectedTabClass = (selectedTabIndex == index) ? "navbar-header-selected content-selected-header-border" : "";
+
+              return (
+                  <div className = {index + " content-header-text-container navbar-header-item-text "+selectedTabClass}>{item.name}</div>
+              )
             })
           }
           <div className = "content-header-setting-icon">
